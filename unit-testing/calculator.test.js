@@ -35,3 +35,41 @@ test("Negativ durch negative Zahl ist größer als 0", () => {
 
   expect(result).toBeGreaterThan(0);
 });
+
+// Kursaufgabe 2040304 - Aufgabe 1
+// // Ergänze die calculator.js aus dem Vormittag um passende
+// "subtract(a,b)" und "multiply(a,b)" Funktionen.
+// Schreibe für beide jeweils 3 Tests und setze a und b dabei wie folgt:
+// a und b positiv
+// a oder b negativ
+// a oder b ist 0
+
+test("Die Differenz von 5 - 3 ist 2", () => {
+  const result = calculator.subtract(5, 3);
+  expect(result).toEqual(2);
+});
+
+test("Die Differenz von 3 - 5 ist -2", () => {
+  const result = calculator.subtract(3, 5);
+  expect(result).toEqual(-2);
+});
+
+test("Die Differenz von 0 - 5 ist -5", () => {
+  const result = calculator.subtract(0, 5);
+  expect(result).toEqual(-5);
+});
+
+test("Das Produkt von 2 * 3 ist 6", () => {
+  const result = calculator.multiply(2, 3);
+  expect(result).toEqual(6);
+});
+
+test("Das Produkt von -2 * 3 ist -6", () => {
+  const result = calculator.multiply(-2, 3);
+  expect(result).toEqual(-6);
+});
+
+test("Das Produkt von 0 * 3 ist 0", () => {
+  const result = calculator.multiply(0, 3);
+  expect(result).toEqual(0);
+});
